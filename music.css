@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+:root{
+    --primary-color: rgb(255, 77, 106);
+    --text-color: rgb(104, 104, 104);
+    --dash-width: 380px;
+    --gray-color: rgb(230, 230, 230);
+}
+html {
+    /* !00% = 16px */
+    font-size: 62.5%; /*(62.5% = 10px)*/
+    line-height: 1.6rem;
+    font-family: 'Aboreto','Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d3d3d3;
+    margin: auto;
+}
+
+.player {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    max-width: 480px;
+    margin: auto;    
+}
+
+.dashboard {
+    position: fixed;
+    margin: 0 auto;
+    max-width: 380px;
+    background-color: #fff;
+    top: 0;
+    width: 100%;
+    box-shadow:0px 0px 30px 2px var(--gray-color) inset;
+}
+
+header {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 16px 0;
+}
+
+header>h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-family: 'Roboto', sans;
+    margin-bottom: 8px;
+}
+
+.cd {
+    display: block;
+    width: 200px;
+    margin: auto;
+}
+
+.cd-thumb {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    background-size: cover;
+}
+
+
+.control {
+    margin: 16px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.btn-replay.active,
+.btn-randomplay.active{
+    color: var(--primary-color);
+}
+
+
+
+.btn-backward,
+.btn-forward{
+    font-size: 1.8rem;
+}
+
+.btn-toggle-playing{
+    font-size: 4.4rem;
+    color: var(--primary-color);
+}
+
+.player .icon-pause {
+    display: none;
+}
+
+.playing .icon-pause {
+    display: inline-block;
+}
+
+.playing .icon-play {
+    display: none;
+}
+
+
+.btn-fixed-height {
+    display: flex;
+    justify-content: center; 
+    color: rgb(131, 131, 131);
+    font-size: 3rem;
+    margin: 0;
+}
+
+.btn-fixed-height.active .icon-down {   
+    display: block;
+}
+
+.btn-fixed-height.active .icon-up {
+    display: none;
+}
+
+.icon-up {
+    line-height: 2.6rem;
+}
+
+.icon-down {
+    display: none;
+    position: relative;
+    top: -8px;
+    color: var(--primary-color);
+    transform: rotate(180deg);
+}
+
+.dashboard--input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 88%;
+    margin: 0 auto 4px;
+}
+
+.progress {
+    position: relative;
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.05);
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: 0.02s;
+    transition: opacity 0.02s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.progress-bar {
+    position: absolute;
+    left: 0;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.progress::-webkit-slider-thumb {
+    /* -webkit-appearance: none; */
+    appearance: none;
+}
+
+.progress:hover::-webkit-slider-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 90%;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* PLAYLIST */
+.playlist {
+    padding-top: 8px;
+    margin-top: 384px;
+    width: 380px;
+    background-color: var(--gray-color);
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    margin:0 8px 8px;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.song.active {
+    background-color: var(--primary-color);
+}
+
+.song:active {
+    opacity: 0.8;
+}
+
+.song.active .option,
+.song.active .author,
+.song.active .title {
+    color: #fff;
+}
+
+.song .thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0 8px;
+}
+
+.song .body {
+    flex: 1;
+    padding: 0 16px;
+}
+
+.song .title {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.song .author {
+    font-size: 12px;
+    color: #999;
+    font-family: 'Roboto';
+}
+
+.song .option {
+    padding: 16px 8px;
+    color: #999;
+    font-size: 18px;
+}
+
+
+
+
+

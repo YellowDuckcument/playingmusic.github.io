@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Play</title>
+    <link rel="stylesheet" href="./asset/font/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./asset/font/themify-icons/themify-icons.css"></head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./music.css">
+<body>
+    <div class="player">
+        <div class="dashboard">
+            <header>
+                <h4>Now playing:</h4>
+                <h2>Click Pow Get Down</h2>
+            </header>
+
+
+            <div class="cd">
+                <div class="cd-thumb" style="background-image: url(https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/4/9/897450/170118474_3134949303.jpg)"></div>
+            </div>
+
+            <div class="control">
+                <div class="btn btn-replay">
+                    <i class="fa-solid fa-arrow-rotate-right"></i>
+                </div>
+                <div class="btn btn-backward">
+                    <i class="fa-solid fa-backward-step"></i>
+                </div>
+                <div class="btn btn-toggle-playing">
+                    <i class="fa-solid fa-circle-play icon-play"></i>
+                    <i class="fa-solid fa-circle-pause icon-pause"></i>
+                </div>
+                <div class="btn btn-forward">
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+                <div class="btn btn-randomplay">
+                    <i class="fa-solid fa-shuffle"></i>                    
+                </div>
+            </div>
+            
+            <div class="dashboard--input">
+                <input id="progress" class="progress" 
+            type="range" value="0" step="1" min="0" max="100">
+                <div class="progress-bar" style="width: 0px;"></div>
+            </div>
+            
+            <div class="btn-fixed-height">
+                <i class="fa-solid fa-caret-up icon-up"></i>
+                <i class="fa-solid fa-caret-up icon-down"></i>
+            </div>
+
+            <audio src="" id="audio"></audio>
+        </div>
+
+
+        <div class="playlist">
+            <!-- <div class="song">
+                <div class="thumb"
+                style="background-image: url(https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/4/9/897450/170118474_3134949303.jpg)">
+                </div>
+                <div class="body">
+                    <h3 class="title">Tên bài hát</h3>
+                    <p class="author">Ca sĩ, nhóm nhạc</p>
+                </div>
+                <div class="option">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div> -->
+            
+        </div>
+        
+    </div>
+    <script src="./tab.js"></script>
+</body>
+</html>
+
+
