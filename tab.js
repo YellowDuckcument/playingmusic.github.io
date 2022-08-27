@@ -174,28 +174,28 @@ const app = {
           audio.currentTime = seekTime;
         }        
 
-//         Xử lý phong to thu nhỏ CD
-//         document.onscroll = function() {
-//             const scrollTop = document.scrollY || document.documentElement.scrollTop;
-//             const newCdWidth = cdWidth - scrollTop;
+        // Xử lý phong to thu nhỏ CD
+        document.onscroll = function() {
+            const scrollTop = document.scrollY || document.documentElement.scrollTop;
+            const newCdWidth = cdWidth - scrollTop;
 
-//             cd.style.width = newCdWidth >= 0 ? newCdWidth +'px': 0;
-//             cd.style.opacity = (newCdWidth)/cdWidth;
+            cd.style.width = newCdWidth >= 0 ? newCdWidth +'px': 0;
+            cd.style.opacity = (newCdWidth)/cdWidth;
         }
 
         // Xử lý khi bấm nút cuộn CD
-        fixedBtn.onclick = function() {        
-          _this.isfixedCD = !_this.isfixedCD;
-          this.classList.toggle('active', _this.isfixedCD)
-          console.log(_this.isfixedCD)
-          if (_this.isfixedCD) {
-            cd.style.width = 0;
-            playlist.style.marginTop = `172px`;
-          } else {           
-            cd.style.width = defaultCdWidth;
-            playlist.style.marginTop = defaultDashboardCd;
-          }
-        }
+        // fixedBtn.onclick = function() {        
+        //   _this.isfixedCD = !_this.isfixedCD;
+        //   this.classList.toggle('active', _this.isfixedCD)
+        //   console.log(_this.isfixedCD)
+        //   if (_this.isfixedCD) {
+        //     cd.style.width = 0;
+        //     playlist.style.marginTop = `172px`;
+        //   } else {           
+        //     cd.style.width = defaultCdWidth;
+        //     playlist.style.marginTop = defaultDashboardCd;
+        //   }
+        // }
 
         // Khi switchSong
         nextBtn.onclick = function() {
