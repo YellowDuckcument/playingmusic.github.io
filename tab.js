@@ -174,7 +174,7 @@ const app = {
           audio.currentTime = seekTime;
         }        
 
-        Xử lý phong to thu nhỏ CD
+//         Xử lý phong to thu nhỏ CD
         document.onscroll = function() {
             const scrollTop = document.scrollY || document.documentElement.scrollTop;
             const newCdWidth = cdWidth - scrollTop;
